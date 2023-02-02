@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.24/13a394eed5c4f9efb2a6d956e2086f1d81e857d9/lombok-1.18.24.jar" />
+        </processorPath>
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="damda-discovery" target="11" />
+      <module name="damda-discovery.main" target="11" />
+      <module name="damda-discovery.test" target="11" />
+      <module name="damda-gateway" target="11" />
+      <module name="damda-gateway.main" target="11" />
+      <module name="damda-gateway.test" target="11" />
+      <module name="damda-product" target="11" />
+      <module name="MSA-DAMDA.damda-product.main" target="11" />
+      <module name="MSA-DAMDA.damda-product.test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

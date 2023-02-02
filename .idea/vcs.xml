@@ -3,5 +3,9 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/damda-discovery" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/damda-gateway" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/damda-product" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/damda-user" vcs="Git" />
   </component>
 </project>

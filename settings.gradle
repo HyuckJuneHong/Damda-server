@@ -1,0 +1,5 @@
+rootProject.name = 'MSA-DAMDA'
+include 'damda-eureka'
+include 'damda-gateway'
+include 'damda-user'
+include 'damda-product'

@@ -9,6 +9,7 @@
         </processorPath>
         <module name="MSA-DAMDA.damda-gateway.main" />
         <module name="MSA-DAMDA.damda-product.main" />
+        <module name="MSA-DAMDA.damda-order.main" />
         <module name="MSA-DAMDA.damda-user.main" />
       </profile>
     </annotationProcessing>

@@ -9,8 +9,9 @@ public enum ErrorCode {
     //fail
     FAIL_NULL("응답이 실패했고, 응답 데이터는 없습니다.", 4000),
 
-    //role invalid
+    //token invalid
     FAIL_EXPIRE("응답이 실패했고, 원인은 토큰 만료입니다.", 4003),
+    FAIL_NO_AUTHORIZATION_HEADER("헤더에 토큰이 없습니다.", 4003),
     FAIL_INVALID_TOKEN("응답이 실패했고, 원인은 Invalid JWT Token 입니다.", 4003),
     FAIL_INVALID_SIGNATURE("응답이 실패했고, 원인은 Invalid JWT Signature 입니다.", 4003),
     FAIL_INVALID_CLAIMS("응답이 실패했고, 원인은 Invalid JWT Claims(EMPTY) 입니다.", 4003),

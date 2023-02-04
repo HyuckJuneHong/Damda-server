@@ -20,6 +20,7 @@ public enum ErrorCode {
     FAIL_USER_ROLE("해당 회원은 권한이 없습니다.", 4103),
 
     //wrong
+    WRONG("아이디 혹은 비밀번호를 다시 확인해주세요", 4100),
     WRONG_IDENTITY("존재하지 않는 아이디입니다.", 4100),
     WRONG_PASSWORD("비밀번호를 다시 확인해주세요", 4100),
     WRONG_PRODUCT_NAME("존재하지 않는 상품입니다.", 4100),

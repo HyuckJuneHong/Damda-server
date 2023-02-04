@@ -1,10 +1,11 @@
 package kr.co.error.exception;
 
 import kr.co.enums.ErrorCode;
-import lombok.Getter;
 
-@Getter
 public class BusinessLogicException extends RuntimeException{
+    public ErrorCode getErrorCode() {
+        return errorCode;
+    }
 
     private ErrorCode errorCode;
 

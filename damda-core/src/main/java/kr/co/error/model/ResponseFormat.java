@@ -1,14 +1,34 @@
 package kr.co.error.model;
 
 import kr.co.enums.ErrorCode;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
 
-@Getter
-@Builder
-@AllArgsConstructor
 public class ResponseFormat<T> {
+
+    public boolean isResult() {
+        return result;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public ResponseFormat(boolean result,
+                          T data,
+                          String message,
+                          int status) {
+        this.result = result;
+        this.data = data;
+        this.message = message;
+        this.status = status;
+    }
 
     private boolean result;
 
@@ -19,38 +39,37 @@ public class ResponseFormat<T> {
     private int status;
 
     public static ResponseFormat ok(){
-        return ResponseFormat.builder()
-                .result(true)
-                .data(null)
-                .message(ErrorCode.SUCCESS_NULL.getMessage())
-                .status(ErrorCode.SUCCESS_NULL.getStatus())
-                .build();
+        return new ResponseFormat(
+                true,
+                null,
+                ErrorCode.SUCCESS_NULL.getMessage(),
+                ErrorCode.SUCCESS_NULL.getStatus()
+        );
     }
 
     public static <T> ResponseFormat ok(T data){
-        return ResponseFormat.builder()
-                .result(true)
-                .data(data)
-                .message(ErrorCode.SUCCESS_VALUE.getMessage())
-                .status(ErrorCode.SUCCESS_VALUE.getStatus())
-                .build();
+        return new ResponseFormat(
+                true,
+                data,
+                ErrorCode.SUCCESS_NULL.getMessage(),
+                ErrorCode.SUCCESS_NULL.getStatus()
+        );
     }
 
     public static ResponseFormat fail(String message){
-        return ResponseFormat.builder()
-                .result(false)
-                .data(null)
-                .message(ErrorCode.FAIL_NULL.getMessage())
-                .status(ErrorCode.FAIL_NULL.getStatus())
-                .build();
+        return new ResponseFormat(
+                false,
+                null,
+                ErrorCode.FAIL_NULL.getMessage(),
+                ErrorCode.FAIL_NULL.getStatus()
+        );
     }
 
     public static ResponseFormat expire(){
-        return ResponseFormat.builder()
-                .result(false)
-                .data(null)
-                .message(ErrorCode.FAIL_EXPIRE.getMessage())
-                .status(ErrorCode.FAIL_EXPIRE.getStatus())
-                .build();
-    }
-}
+        return new ResponseFormat(
+                false,
+                null,
+                ErrorCode.FAIL_EXPIRE.getMessage(),
+                ErrorCode.FAIL_EXPIRE.getStatus()
+        );
+    }}

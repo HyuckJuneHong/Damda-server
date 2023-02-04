@@ -1,16 +1,19 @@
 package kr.co.enums;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-
 import java.util.Arrays;
 
-@Getter
-@AllArgsConstructor
 public enum UserRole {
 
     ROLE_USER("일반"),
     ROLE_ADMIN("관리자");
+
+    public String getRole() {
+        return role;
+    }
+
+    UserRole(String role) {
+        this.role = role;
+    }
 
     private String role;
 

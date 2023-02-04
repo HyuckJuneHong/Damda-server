@@ -1,8 +1,5 @@
 package kr.co.enums;
 
-import lombok.Getter;
-
-@Getter
 public enum ErrorCode {
 
     //success
@@ -33,6 +30,14 @@ public enum ErrorCode {
 
     private String message;
     private int status;
+
+    public String getMessage() {
+        return message;
+    }
+
+    public int getStatus() {
+        return status;
+    }
 
     ErrorCode(String message, int status) {
         this.message = message;

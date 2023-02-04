@@ -1,27 +1,38 @@
 package kr.co.error.model;
 
 import kr.co.enums.ErrorCode;
-import lombok.*;
 
-@Builder
-@Getter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-@AllArgsConstructor
 public class ErrorResponse {
     private String message;
     private int status;
 
+    public ErrorResponse() {
+    }
+
+    public ErrorResponse(String message, int status) {
+        this.message = message;
+        this.status = status;
+    }
+
     public static ErrorResponse of(ErrorCode errorCode){
-        return ErrorResponse.builder()
-                .message(errorCode.getMessage())
-                .status(errorCode.getStatus())
-                .build();
+        return new ErrorResponse(
+                errorCode.getMessage(),
+                errorCode.getStatus()
+        );
     }
 
     public static ErrorResponse of(String errorMessage){
-        return ErrorResponse.builder()
-                .message(errorMessage)
-                .status(400)
-                .build();
+        return new ErrorResponse(
+                errorMessage,
+                400
+        );
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public int getStatus() {
+        return status;
     }
 }

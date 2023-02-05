@@ -3,44 +3,87 @@
 
 - 프로젝트 기간 : 2023.02.01 - continue
 
+#구조
+## 예상 서비스
+<img width="554" alt="image" src="https://user-images.githubusercontent.com/31675711/216048477-05f0d93e-ee70-4fce-b019-a3e46bc3719b.png">
+
 # 프로젝트 기록
 <ol>
     <h3>Eureka</h3>
+        <li>
+            Eureka Server 구축
+        </li>
     <h3>API Gateway</h3>
         <li>
+            Gateway Server 구축
             <ul>
-                Gateway Server 구축
                 <li>Spring Cloud API Gateway는 비동기 방식으로 서비스가 실행</li>
+                <li>Eureka Server에 등록</li>
+                <li>각 서비스 Load Balancer 적용</li>
             </ul>
         </li>
         <li>
+            Custom, Global, Loggin Filter Test -> Mono 사용.
             <ul>
-                Custom, Global, Loggin Filter Test -> Mono 사용.
                 <li>의문점: Flux도 0~1개의 데이터 전달이 가능한데, Mono 라는 타입이 필요할까?</li>
                 <li>해답 : 데이터 설계 시, 결과가 없거나 하나의 결과값만 받는 것이 명백한 경우, List를 사용하지 않는 것처럼, 불필요하게 Flux를 사용하지 않고 Mono를 사용하는 것.</li>
             </ul>
         </li>
         <li>
+            By 토비: WebFlux를 아래와 같은 용도로 사용하는 것을 추천한다.
             <ul>
-                By 토비: WebFlux를 아래와 같은 용도로 사용하는 것을 추천한다.
                 <li>비동기 : Non-Blocking Reactive 개발에 사용.</li>
                 <li>효율적으로 동작하는 고성능 Web Application 개발.</li>
                 <li>Service 간 호출이 많은 MSA에 적합</li>
             </ul>
         </li>
         <li>
+            Gateway Authorization Header filter 구현
             <ul>
-                Gateway Authorization Header filter 구현
+                <li></li>
             </ul>
         </li>
     <h3>User</h3>
+        <li>User Server 구축
+            <ul>
+                <li>Eureka server 등록</li>
+                <li>API Gateway 등록</li>
+                <li>랜덤 포트 부여</li>
+                <li>Swagger를 활용한 API 자동 문서화</li>
+            </ul>
+        </li>
+        <li>
+            JWT 및 Spring Security 활용
+            <ul>
+                <li>Password 인코딩 후 디비에 저장</li>
+                <li>Login 성공 시, JWT Token 발급</li>
+            </ul>
+        </li>
     <h3>Product</h3>
+        <li>Product Server 구축
+            <ul>
+                <li>Eureka server 등록</li>
+                <li>API Gateway 등록</li>
+                <li>랜덤 포트 부여</li>
+                <li>Swagger를 활용한 API 자동 문서화</li>
+            </ul>
+        </li>
     <h3>Order</h3>
+        <li>Order Server 구축
+            <ul>
+                <li>Eureka server 등록</li>
+                <li>API Gateway 등록</li>
+                <li>랜덤 포트 부여</li>
+                <li>Swagger를 활용한 API 문서 자동화 </li>
+            </ul>
+        </li>
     <h3>Core</h3>
+        <li>코드 공통화
+            <ul>
+                <li>Enum 속성 공통화</li>
+                <li>Exception 처리 공통화</li>
+                <li>Error Model 공통화</li>
+            </ul>
+        </li>
 </ol>
-
-# 전체 어플리케이션 구성
-## 예상 서비스 구성
-<img width="554" alt="image" src="https://user-images.githubusercontent.com/31675711/216048477-05f0d93e-ee70-4fce-b019-a3e46bc3719b.png">
-
 

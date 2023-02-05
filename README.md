@@ -12,6 +12,8 @@
                 Gateway Server 구축
                 <li>Spring Cloud API Gateway는 비동기 방식으로 서비스가 실행</li>
             </ul>
+        </li>
+        <li>
             <ul>
                 Custom, Global, Loggin Filter Test -> Mono 사용.
                 <li>의문점: Flux도 0~1개의 데이터 전달이 가능한데, Mono 라는 타입이 필요할까?</li>
@@ -21,9 +23,12 @@
                 <li>효율적으로 동작하는 고성능 Web Application 개발.</li>
                 <li>Service 간 호출이 많은 MSA에 적합</li>
             </ul>
+        </li>
+        <li>
             <ul>
                 Gateway Authorization Header filter 구현
             </ul>
+        </li>
     <h3>User</h3>
     <h3>Product</h3>
     <h3>Order</h3>

@@ -4,8 +4,12 @@
 - 프로젝트 기간 : 2023.02.01 - continue
 
 #구조
+
 ## 예상 서비스
 <img width="554" alt="image" src="https://user-images.githubusercontent.com/31675711/216048477-05f0d93e-ee70-4fce-b019-a3e46bc3719b.png">
+
+##예상 
+<img width="1070" alt="image" src="https://user-images.githubusercontent.com/31675711/216807120-546d169c-3de2-4d2c-a671-71be715739b6.png">
 
 # 프로젝트 기록
 <ol>
@@ -23,7 +27,7 @@
             </ul>
         </li>
         <li>
-            Custom, Global, Loggin Filter Test -> Mono 사용.
+            Custom, Global, Logging Filter Test -> Mono 사용.
             <ul>
                 <li>의문점: Flux도 0~1개의 데이터 전달이 가능한데, Mono 라는 타입이 필요할까?</li>
                 <li>해답 : 데이터 설계 시, 결과가 없거나 하나의 결과값만 받는 것이 명백한 경우, List를 사용하지 않는 것처럼, 불필요하게 Flux를 사용하지 않고 Mono를 사용하는 것.</li>

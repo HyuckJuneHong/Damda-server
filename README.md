@@ -11,13 +11,13 @@
 
 # 프로젝트 기록
 <ol>
-    <h3>Eureka</h3>
+    <h3><a href="https://github.com/HyuckJuneHong/damda-eureka-server">Eureka</a></h3>
         <li>
             Eureka Server 구축
         </li>
  </ol>
  <ol>
-    <h3>API Gateway</h3>
+    <h3><a href="https://github.com/HyuckJuneHong/damda-gateway-server">API Gateway</a></h3>
         <li>
             Gateway Server 구축
             <ul>
@@ -49,8 +49,9 @@
         </li>
  </ol>
  <ol>
-    <h3>User</h3>
-        <li>User Server 구축
+    <h3><a href="https://github.com/HyuckJuneHong/damda-user-server">User</a></h3>
+        <li>
+            User Server 구축
             <ul>
                 <li>Eureka server 등록</li>
                 <li>API Gateway 등록</li>
@@ -67,7 +68,7 @@
         </li>
  </ol>
  <ol>
-    <h3>Product</h3>
+    <h3><a href="https://github.com/HyuckJuneHong/damda-product-server">Product</a></h3>
         <li>Product Server 구축
             <ul>
                 <li>Eureka server 등록</li>
@@ -78,7 +79,7 @@
         </li>
  </ol>
  <ol>
-    <h3>Order</h3>
+    <h3><a href="https://github.com/HyuckJuneHong/damda-order-server">Order</a></h3>
         <li>Order Server 구축
             <ul>
                 <li>Eureka server 등록</li>
@@ -89,7 +90,7 @@
         </li>
  </ol>
  <ol>
-    <h3>Core</h3>
+    <h3><a href="https://github.com/HyuckJuneHong/Damda-server/tree/main/damda-core">Core</a></h3>
         <li>코드 공통화
             <ul>
                 <li>Enum 속성 공통화</li>

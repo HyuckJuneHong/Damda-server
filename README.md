@@ -2,13 +2,11 @@
 > MSA 기반의 사이드 프로젝트입니다.
 
 - 프로젝트 기간 : 2023.02.01 - continue
-
+ 
 #구조
-
 ## 예상 서비스
 <img width="554" alt="image" src="https://user-images.githubusercontent.com/31675711/216048477-05f0d93e-ee70-4fce-b019-a3e46bc3719b.png">
-
-##예상 
+## 예상 애플리케이션
 <img width="1070" alt="image" src="https://user-images.githubusercontent.com/31675711/216807120-546d169c-3de2-4d2c-a671-71be715739b6.png">
 
 # 프로젝트 기록

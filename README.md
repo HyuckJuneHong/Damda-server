@@ -18,6 +18,10 @@
                 Custom, Global, Loggin Filter Test -> Mono 사용.
                 <li>의문점: Flux도 0~1개의 데이터 전달이 가능한데, Mono 라는 타입이 필요할까?</li>
                 <li>해답 : 데이터 설계 시, 결과가 없거나 하나의 결과값만 받는 것이 명백한 경우, List를 사용하지 않는 것처럼, 불필요하게 Flux를 사용하지 않고 Mono를 사용하는 것.</li>
+            </ul>
+        </li>
+        <li>
+            <ul>
                 By 토비: WebFlux를 아래와 같은 용도로 사용하는 것을 추천한다.
                 <li>비동기 : Non-Blocking Reactive 개발에 사용.</li>
                 <li>효율적으로 동작하는 고성능 Web Application 개발.</li>

@@ -50,6 +50,12 @@
                 <li></li>
             </ul>
         </li>
+        <li> 외부 설정 정보 활용 및 Changed Configuration Values
+            <ul>
+                <li>Spring Cloud Starter Config 정보 가져옴.</li>
+                <li>Actuator와 Spring Cloud Bus를 사용해서, 효율적으로 application 상태 및 모니터링</li>
+            </ul>
+        </li>
  </ol>
  <ol>
     <h3><a href="https://github.com/HyuckJuneHong/damda-user-server">User</a></h3>
@@ -73,7 +79,7 @@
             외부 설정 정보 활용 및 Changed Configuration Values
             <ul>
                 <li>Spring Cloud Starter Config 정보 가져옴.</li>
-                <li>Spring Cloud Bus를 사용해서, 효율적으로 application 상태 및 모니터링</li>
+                <li>Actuator와 Spring Cloud Bus를 사용해서, 효율적으로 application 상태 및 모니터링</li>
             </ul>
         </li>
 </ol>

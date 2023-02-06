@@ -124,4 +124,5 @@
             <li>애플리케이션 배포 파이프라인을 통해 환경에 맞는 구성 정보 사용</li>
         </ul>
     </li>
+    <li>SSH Key 생성하여 private git repository에 접근</li>
 </ol>

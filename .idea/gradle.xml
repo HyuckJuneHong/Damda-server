@@ -9,6 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/damda-config" />
             <option value="$PROJECT_DIR$/damda-core" />
             <option value="$PROJECT_DIR$/damda-discovery" />
             <option value="$PROJECT_DIR$/damda-gateway" />

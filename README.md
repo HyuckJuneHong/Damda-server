@@ -50,13 +50,6 @@
                 <li></li>
             </ul>
         </li>
-        <li> 외부 설정 정보 활용 및 Changed Configuration Values
-            <ul>
-                <li>Spring Cloud Starter Config 정보 가져옴.</li>
-                <li>Actuator 사용하여, 효율적으로 application 상태 및 모니터링</li>
-                <li>Spring Cloud Bus 사용하여, 분산 시스템의 노드를 경량 메시지 브로커와 연결하여 상태, 구성에 대한 변경 사항 연결 노드에게 전달</li>
-            </ul>
-        </li>
  </ol>
  <ol>
     <h3><a href="https://github.com/HyuckJuneHong/damda-user-server">User</a></h3>
@@ -74,14 +67,6 @@
             <ul>
                 <li>Password 인코딩 후 디비에 저장</li>
                 <li>Login 성공 시, JWT Token 발급</li>
-            </ul>
-        </li>
-        <li>
-            외부 설정 정보 활용 및 Changed Configuration Values
-            <ul>
-                <li>Spring Cloud Starter Config 정보 가져옴.</li>
-                <li>Actuator 사용하여, 효율적으로 application 상태 및 모니터링</li>
-                <li>Spring Cloud Bus 사용하여, 분산 시스템의 노드를 경량 메시지 브로커와 연결하여 상태, 구성에 대한 변경 사항 연결 노드에게 전달</li>
             </ul>
         </li>
 </ol>
@@ -126,5 +111,26 @@
             <li>애플리케이션 배포 파이프라인을 통해 환경에 맞는 구성 정보 사용</li>
         </ul>
     </li>
-    <li>SSH Key 생성하여 private git repository 접근</li>
+    <li> 외부 설정 정보 활용 및 Changed Configuration Values
+        <ul>
+            <li>Spring Cloud Starter Config 정보 가져옴.</li>
+            <li>Actuator 사용하여, 효율적으로 application 상태 및 모니터링</li>
+            <li>Spring Cloud Bus 사용하여, 분산 시스템의 노드를 경량 메시지 브로커와 연결하여 상태, 구성에 대한 변경 사항 연결 노드에게 전달</li>
+            <li>SSH Key 생성하여 private git repository 접근</li>
+        </ul>
+    </li>
+    <li>AMQP(Advanced Message Queuing Protocol) 사용
+        <ul>
+            <li>RabbitMQ 활용</li>
+            <li>왜 Kafka가 아닌, RabbitMQ를 선택했나?
+                <ul>
+                    <li>최고 처리량 Kafka : 605MB/s </li>
+                    <li>최고 처리량 RabbitMQ : 38MB/s </li>
+                    <li>Kafka는 대용량 데이터를 빠른 시간내에 처리하고자 할 때 적합하다.</li>
+                    <li>하지만 해당 프로젝트는 대용량 데이터라고 하기엔 부족하기 때문에, </li>>
+                    <li>적은 데이터를 안전하게 전달하는 것을 보장해주는 RabbitMQ를 선택하게 되었다.</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
 </ol>

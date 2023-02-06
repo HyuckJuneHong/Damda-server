@@ -1,19 +1,17 @@
 package kr.co.enums;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+
 import java.util.Arrays;
 
+@Getter
+@AllArgsConstructor
 public enum Gender {
 
     MALE("남성"),
     FEMALE("여성");
-
-    Gender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getGender() {
-        return gender;
-    }
 
     String gender;
 

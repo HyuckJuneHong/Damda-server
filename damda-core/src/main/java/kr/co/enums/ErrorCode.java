@@ -1,5 +1,10 @@
 package kr.co.enums;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@Getter
+@AllArgsConstructor
 public enum ErrorCode {
 
     //success
@@ -31,17 +36,4 @@ public enum ErrorCode {
 
     private String message;
     private int status;
-
-    public String getMessage() {
-        return message;
-    }
-
-    public int getStatus() {
-        return status;
-    }
-
-    ErrorCode(String message, int status) {
-        this.message = message;
-        this.status = status;
-    }
 }

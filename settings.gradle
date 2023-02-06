@@ -5,4 +5,5 @@ include 'damda-user'
 include 'damda-product'
 include 'damda-order'
 include 'damda-core'
+include 'damda-config'
 

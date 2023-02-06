@@ -53,7 +53,8 @@
         <li> 외부 설정 정보 활용 및 Changed Configuration Values
             <ul>
                 <li>Spring Cloud Starter Config 정보 가져옴.</li>
-                <li>Actuator와 Spring Cloud Bus를 사용해서, 효율적으로 application 상태 및 모니터링</li>
+                <li>Actuator 사용하여, 효율적으로 application 상태 및 모니터링</li>
+                <li>Spring Cloud Bus 사용하여, 분산 시스템의 노드를 경량 메시지 브로커와 연결하여 상태, 구성에 대한 변경 사항 연결 노드에게 전달</li>
             </ul>
         </li>
  </ol>
@@ -79,7 +80,8 @@
             외부 설정 정보 활용 및 Changed Configuration Values
             <ul>
                 <li>Spring Cloud Starter Config 정보 가져옴.</li>
-                <li>Actuator와 Spring Cloud Bus를 사용해서, 효율적으로 application 상태 및 모니터링</li>
+                <li>Actuator 사용하여, 효율적으로 application 상태 및 모니터링</li>
+                <li>Spring Cloud Bus 사용하여, 분산 시스템의 노드를 경량 메시지 브로커와 연결하여 상태, 구성에 대한 변경 사항 연결 노드에게 전달</li>
             </ul>
         </li>
 </ol>
@@ -124,5 +126,5 @@
             <li>애플리케이션 배포 파이프라인을 통해 환경에 맞는 구성 정보 사용</li>
         </ul>
     </li>
-    <li>SSH Key 생성하여 private git repository에 접근</li>
+    <li>SSH Key 생성하여 private git repository 접근</li>
 </ol>

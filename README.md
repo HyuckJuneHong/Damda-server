@@ -69,7 +69,8 @@
     <li>
         Gateway Authorization Header filter 구현
         <ul>
-            <li></li>
+            <li>모든 요청은 서비스 최전방에 위치하는,API Gateway를 통해서만 서비스에 접근 가능하기 때문에, Gateway Filter에서 인가처리하도록 구현</li>
+            <li>즉,모든 요청 Authorization Header에 Access Token을 담아 요청을 보내면 서버에서 일련의 인가 과정을 거쳐 Resource Server에 요청을 라우팅하도록 했다.</li>
         </ul>
     </li>
  </ol>

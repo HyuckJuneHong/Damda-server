@@ -126,7 +126,8 @@
             <li>Error Model 공통화</li>
         </ul>
     </li>
- </ol>
+    <li>효율적인 Feign Client 통신을 위한 Dto 공통화</li>
+</ol>
 <ol>
     <h3><a href="https://github.com/HyuckJuneHong/damda-config-server">Spring Cloud Config Server</a></h3>
     <li>분산 시스템에서 서버 클라이언트 구성에 필요한 설정 정보를 외부 시스템에서 관리를 위함.</li>

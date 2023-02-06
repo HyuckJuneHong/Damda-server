@@ -103,7 +103,7 @@
         </li>
  </ol>
 <ol>
-    <h3>Spring Cloud Config Server</h3>
+    <h3><a href="">Spring Cloud Config Server</a></h3>
     <li>분산 시스템에서 서버 클라이언트 구성에 필요한 설정 정보를 외부 시스템에서 관리를 위함.</li>
         <ul>
             <li>하나의 중앙화된 저장소에서 구성요소 관리</li>

@@ -9,6 +9,9 @@
 ## 예상 애플리케이션
 <img width="1070" alt="image" src="https://user-images.githubusercontent.com/31675711/216807120-546d169c-3de2-4d2c-a671-71be715739b6.png">
 
+##예상 설정 정보
+![img.png](img.png)
+
 # 프로젝트 기록
 <ol>
     <h3><a href="https://github.com/HyuckJuneHong/damda-eureka-server">Eureka</a></h3>
@@ -99,3 +102,13 @@
             </ul>
         </li>
  </ol>
+<ol>
+    <h3>Spring Cloud Config Server</h3>
+    <li>분산 시스템에서 서버 클라이언트 구성에 필요한 설정 정보를 외부 시스템에서 관리를 위함.</li>
+        <ul>
+            <li>하나의 중앙화된 저장소에서 구성요소 관리</li>
+            <li>각 서비스 재빌드를 하지 않고 바로 적용</li>
+            <li>애플리케이션 배포 파이프라인을 통해 환경에 맞는 구성 정보 사용</li>
+        </ul>
+    </li>
+</ol>

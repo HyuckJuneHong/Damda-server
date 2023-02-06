@@ -9,8 +9,8 @@
 ## 예상 애플리케이션
 <img width="1070" alt="image" src="https://user-images.githubusercontent.com/31675711/216807120-546d169c-3de2-4d2c-a671-71be715739b6.png">
 
-##예상 설정 정보
-![img.png](img.png)
+## 예상 설정 정보
+<img width="577" alt="image" src="https://user-images.githubusercontent.com/31675711/216890973-0fb56162-d975-44cf-a0d5-b7c105a1a27d.png">
 
 # 프로젝트 기록
 <ol>

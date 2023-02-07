@@ -47,8 +47,8 @@
             </li>
             <li>Feign Client
                 <ul>
-                    <li>Feign Client 로그 추적</li>
-                    <li>Feign Exception 처리</li>
+                    <li>Feign Logger를 활용한 Feign Client 로그 추적</li>
+                    <li>ErrorDecoder를 활용한 Feign Exception 처리</li>
                 </ul>
             </li>
         </ul>

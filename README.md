@@ -6,7 +6,7 @@
 - Java 11, Spring Boot 2.6.7, Gradle(Build Tool)
  
 ## 예상 서비스
-<img width="554" alt="image" src="https://user-images.githubusercontent.com/31675711/216048477-05f0d93e-ee70-4fce-b019-a3e46bc3719b.png">
+<img width="557" alt="image" src="https://user-images.githubusercontent.com/31675711/216048477-05f0d93e-ee70-4fce-b019-a3e46bc3719b.png">
 
 ## 예상 애플리케이션
 <img width="1077" alt="image" src="https://user-images.githubusercontent.com/31675711/216955004-049acb53-8700-4e1a-b386-ddd313d9934d.png">
@@ -16,8 +16,13 @@
 
 # 프로젝트 기록
 <ol>
-    <h3><a href="https://github.com/HyuckJuneHong/damda-eureka-server">Eureka</a></h3>
-    <li>Eureka Server 구축</li>
+    <h3>각 서비스 공통 작업</h3>
+    <li>각 서비스 Eureka Server 및 API Gateway 등록
+        <ul>
+            <li>랜덤 포트 부여</li>
+            <li>Swagger를 활용한 API 문서 자동화</li>
+        </ul>
+    </li>
     <li>Communication Types
         <ul>
             <li>Synchronous(동기) HTTP 통신
@@ -40,8 +45,18 @@
                     <li>Load Balanced 지원</li>
                 </ul>
             </li>
+            <li>Feign Client
+                <ul>
+                    <li>Feign Client 로그 추적</li>
+                    <li>Feign Exception 처리</li>
+                </ul>
+            </li>
         </ul>
     </li>
+</ol>
+<ol>
+    <h3><a href="https://github.com/HyuckJuneHong/damda-eureka-server">Eureka</a></h3>
+    <li>Eureka Server 구축</li>
  </ol>
  <ol>
     <h3><a href="https://github.com/HyuckJuneHong/damda-gateway-server">API Gateway</a></h3>
@@ -49,7 +64,6 @@
         Gateway Server 구축
         <ul>
             <li>Spring Cloud API Gateway는 비동기 방식으로 서비스가 실행</li>
-            <li>Eureka Server에 등록</li>
             <li>각 서비스 Load Balancer 적용 -></li>
         </ul>
     </li>
@@ -78,15 +92,7 @@
  </ol>
  <ol>
     <h3><a href="https://github.com/HyuckJuneHong/damda-user-server">User</a></h3>
-    <li>
-        User Server 구축
-        <ul>
-            <li>Eureka server 등록</li>
-            <li>API Gateway 등록</li>
-            <li>랜덤 포트 부여</li>
-            <li>Swagger를 활용한 API 자동 문서화</li>
-        </ul>
-    </li>
+    <li>User Server 구축</li>
     <li>
         JWT 및 Spring Security 활용
         <ul>
@@ -97,25 +103,11 @@
 </ol>
  <ol>
     <h3><a href="https://github.com/HyuckJuneHong/damda-product-server">Product</a></h3>
-    <li>Product Server 구축
-        <ul>
-            <li>Eureka server 등록</li>
-            <li>API Gateway 등록</li>
-            <li>랜덤 포트 부여</li>
-            <li>Swagger를 활용한 API 자동 문서화</li>
-        </ul>
-    </li>
+    <li>Product Server 구축</li>
  </ol>
  <ol>
     <h3><a href="https://github.com/HyuckJuneHong/damda-order-server">Order</a></h3>
-    <li>Order Server 구축
-        <ul>
-            <li>Eureka server 등록</li>
-            <li>API Gateway 등록</li>
-            <li>랜덤 포트 부여</li>
-            <li>Swagger를 활용한 API 문서 자동화 </li>
-        </ul>
-    </li>
+    <li>Order Server 구축</li>
  </ol>
  <ol>
     <h3><a href="https://github.com/HyuckJuneHong/Damda-server/tree/main/damda-core">Core</a></h3>
@@ -126,7 +118,6 @@
             <li>Error Model 공통화</li>
         </ul>
     </li>
-    <li>효율적인 Feign Client 통신을 위한 Dto 공통화</li>
 </ol>
 <ol>
     <h3><a href="https://github.com/HyuckJuneHong/damda-config-server">Spring Cloud Config Server</a></h3>

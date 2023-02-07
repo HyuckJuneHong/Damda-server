@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/damda-gateway" />
             <option value="$PROJECT_DIR$/damda-order" />
             <option value="$PROJECT_DIR$/damda-product" />
+            <option value="$PROJECT_DIR$/damda-test" />
             <option value="$PROJECT_DIR$/damda-user" />
           </set>
         </option>

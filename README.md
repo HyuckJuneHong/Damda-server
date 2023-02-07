@@ -14,6 +14,9 @@
 ## 예상 설정 정보
 <img width="577" alt="image" src="https://user-images.githubusercontent.com/31675711/216890973-0fb56162-d975-44cf-a0d5-b7c105a1a27d.png">
 
+## Kafka를 활용한 동기화 문제 해결(Kafka Connector + Database) 
+<img width="777" alt="image" src="https://user-images.githubusercontent.com/31675711/217210434-f1c432fc-5c5f-447a-943e-22a550739bf6.png">
+
 # 프로젝트 기록
 <ol>
     <h3>각 서비스 공통 작업</h3>
@@ -49,12 +52,23 @@
             <li>Feign Client
                 <ul>
                     <li>Feign Logger를 활용한 Feign Client 로그 추적</li>
-                    <li>ErrorDecoder를 활용한 Feign Exception 처리</li>
+                    <li>Error Decoder를 활용한 Feign Exception 처리</li>
                 </ul>
             </li>
-        </ul>
+        </ul> 
     </li>
     <li>하나의 서비스를 2개 이상으로 기동 시, 해당 서비스의 데이터도 분산 저장되기 때문에, 동기화 문제가 발생하는 것을 발견.
+        <ul>
+            <li>물리적으로 떨어져 있는 각 인스턴스의 데이터를 하나의 Database에 저장하기 위해선 트랜젝션 관리를 잘 해야겠다고 판단.(동시성 등)</li>
+            <li>때문에, 각 서비스의 Database 끼리는 동기화시키는 것이 좋을 것이라고 판단.</li> 
+        </ul>
+    </li>
+    <li>결론 : Message Queuing Server(Apache Kafka)를 이용
+        <ul>
+            <li>한 쪽에서 발생한 데이터를 바로 Database에 보내지 말고 Message Queuing Server에 전달 후 단일 Database에 저장한다.</li>
+            <li>즉, Message Queuing Server를 중간 매개체로 둔다.</li>
+            <li>따라서, 각 서비스가 필요한 데이터에 접근 했을 때, 동일한 Database를 바라보기 때문에, 동기화 문제를 해결할 수 있다. </li>
+        </ul>
     </li>
 </ol>
 <ol>

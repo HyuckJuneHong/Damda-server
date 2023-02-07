@@ -2,8 +2,13 @@
 > MSA 기반의 사이드 프로젝트입니다.
 - 프로젝트 기간 : 2023.02.01 - continue
 
-### 개발환경
-- Java 11, Spring Boot 2.6.7, Gradle(Build Tool)
+### 개발환경 / 사용기술
+- 개발환경 : Java 11, Spring Boot 2.6.7, Gradle(Build Tool), Git, MySQL
+- 사용 기술
+  - JPA, Swagger, Handler Exception, Spring Security, JWT
+  - Eureka, API Gateway, Feign Client, ErrorDecoder
+  - Spring Cloud, Spring Actuator
+  - RabbitMQ, Kafka, Docker
  
 ## 예상 서비스
 <img width="557" alt="image" src="https://user-images.githubusercontent.com/31675711/216048477-05f0d93e-ee70-4fce-b019-a3e46bc3719b.png">
@@ -14,7 +19,7 @@
 ## 예상 설정 정보
 <img width="577" alt="image" src="https://user-images.githubusercontent.com/31675711/216890973-0fb56162-d975-44cf-a0d5-b7c105a1a27d.png">
 
-## Kafka를 활용한 동기화 문제 해결(Kafka Connector + Database) 
+## Kafka Connector + Database 
 <img width="777" alt="image" src="https://user-images.githubusercontent.com/31675711/217210434-f1c432fc-5c5f-447a-943e-22a550739bf6.png">
 
 # 프로젝트 기록
@@ -57,17 +62,13 @@
             </li>
         </ul> 
     </li>
-    <li>하나의 서비스를 2개 이상으로 기동 시, 해당 서비스의 데이터도 분산 저장되기 때문에, 동기화 문제가 발생하는 것을 발견.
-        <ul>
-            <li>물리적으로 떨어져 있는 각 인스턴스의 데이터를 하나의 Database에 저장하기 위해선 트랜젝션 관리를 잘 해야겠다고 판단.(동시성 등)</li>
-            <li>때문에, 각 서비스의 Database 끼리는 동기화시키는 것이 좋을 것이라고 판단.</li> 
-        </ul>
-    </li>
-    <li>결론 : Message Queuing Server(Apache Kafka)를 이용
-        <ul>
-            <li>한 쪽에서 발생한 데이터를 바로 Database에 보내지 말고 Message Queuing Server에 전달 후 단일 Database에 저장한다.</li>
-            <li>즉, Message Queuing Server를 중간 매개체로 둔다.</li>
-            <li>따라서, 각 서비스가 필요한 데이터에 접근 했을 때, 동일한 Database를 바라보기 때문에, 동기화 문제를 해결할 수 있다. </li>
+    <li>Apache Kafka 
+        <ul> 
+            <li>상태 및 구성에 대한 변경사항을 각 마이크로서비스에게 효율적으로 전달하기 위해, 각 마이크로서비스를 Kafka가 아닌, rabbitMQ와 연결한 이유와 동일하게, 해당 프로젝트에서 Kafka를 사용하는 것은 오버엔지니어링이다.</li>
+            <li>그리고 필자는 아직 대용량 트레픽을 경험 해본 적도 없다. 하지만, 당장 경험이 없다고 해서, Kafka를 적용해보지 않으면, 대용량 트레픽을 감당해야할 때, 많은 어려움을 겪을 거라 생각하고 직접 적용해보기로 했다.</li>
+            <li>필자는 Database와 마이크로서비스 사이에 Message Queuing Server(Apache Kafka)를 이용하여 중간 매개체를 둘 것이다.</li>
+            <li>사용 목적 : 프로그래밍 작업은 최소화하면서, Database 개수와 상관없이 마이크로서비스에 직접 Database에 대한 커넥션과 처리작업을 하지 않고, 관련 작업을 Kafka에 일임함으로 써, 보다 비즈니스 도메인에 관련된 처리 작업을 해보자.</li>
+            <li>결론 : 성능 향상 관점에서 보자.</li>
         </ul>
     </li>
 </ol>
@@ -149,7 +150,7 @@
         <ul>
             <li>Spring Cloud Starter Config 정보 가져옴.</li>
             <li>Actuator 사용하여, 효율적으로 application 상태 및 모니터링</li>
-            <li>Spring Cloud Bus 사용하여, 분산 시스템의 노드를 경량 메시지 브로커와 연결하여 상태, 구성에 대한 변경 사항 연결 노드에게 전달</li>
+            <li>Spring Cloud Bus 사용하여, 분산 시스템의 노드(=마이크로서비스)를 경량 메시지 브로커(=RabbitMQ)와 연결하여 상태, 구성에 대한 변경 사항 연결 노드에게 전달</li>
             <li>SSH Key 생성하여 private git repository 접근</li>
         </ul>
     </li>

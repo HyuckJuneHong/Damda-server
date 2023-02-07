@@ -21,6 +21,7 @@
         <ul>
             <li>랜덤 포트 부여</li>
             <li>Swagger를 활용한 API 문서 자동화</li>
+            <li>Handler Exception 처리</li>
         </ul>
     </li>
     <li>Communication Types
@@ -52,6 +53,8 @@
                 </ul>
             </li>
         </ul>
+    </li>
+    <li>하나의 서비스를 2개 이상으로 기동 시, 해당 서비스의 데이터도 분산 저장되기 때문에, 동기화 문제가 발생하는 것을 발견.
     </li>
 </ol>
 <ol>

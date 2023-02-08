@@ -19,8 +19,9 @@
 ## 예상 설정 정보
 <img width="577" alt="image" src="https://user-images.githubusercontent.com/31675711/216890973-0fb56162-d975-44cf-a0d5-b7c105a1a27d.png">
 
-## Kafka Connector + Database 
-<img width="777" alt="image" src="https://user-images.githubusercontent.com/31675711/217210434-f1c432fc-5c5f-447a-943e-22a550739bf6.png">
+[comment]: <> (## Kafka Connector + Database )
+
+[comment]: <> (<img width="777" alt="image" src="https://user-images.githubusercontent.com/31675711/217210434-f1c432fc-5c5f-447a-943e-22a550739bf6.png">)
 
 # 프로젝트 기록
 <ol>
@@ -62,15 +63,24 @@
             </li>
         </ul> 
     </li>
-    <li>Apache Kafka 
-        <ul> 
-            <li>상태 및 구성에 대한 변경사항을 각 마이크로서비스에게 효율적으로 전달하기 위해, 각 마이크로서비스를 Kafka가 아닌, rabbitMQ와 연결한 이유와 동일하게, 해당 프로젝트에서 Kafka를 사용하는 것은 오버엔지니어링이다.</li>
-            <li>그리고 필자는 아직 대용량 트레픽을 경험 해본 적도 없다. 하지만, 당장 경험이 없다고 해서, Kafka를 적용해보지 않으면, 대용량 트레픽을 감당해야할 때, 많은 어려움을 겪을 거라 생각하고 직접 적용해보기로 했다.</li>
-            <li>필자는 Database와 마이크로서비스 사이에 Message Queuing Server(Apache Kafka)를 이용하여 중간 매개체를 둘 것이다.</li>
-            <li>사용 목적 : 프로그래밍 작업은 최소화하면서, Database 개수와 상관없이 마이크로서비스에 직접 Database에 대한 커넥션과 처리작업을 하지 않고, 관련 작업을 Kafka에 일임함으로 써, 보다 비즈니스 도메인에 관련된 처리 작업을 해보자.</li>
-            <li>결론 : 성능 향상 관점에서 보자.</li>
-        </ul>
-    </li>
+
+[comment]: <> (    <li>Apache Kafka )
+
+[comment]: <> (        <ul> )
+
+[comment]: <> (            <li>상태 및 구성에 대한 변경사항을 각 마이크로서비스에게 효율적으로 전달하기 위해, 각 마이크로서비스를 Kafka가 아닌, rabbitMQ와 연결한 이유와 동일하게, 해당 프로젝트에서 Kafka를 사용하는 것은 오버엔지니어링이다.</li>)
+
+[comment]: <> (            <li>그리고 필자는 아직 대용량 트레픽을 경험 해본 적도 없다. 하지만, 당장 경험이 없다고 해서, Kafka를 적용해보지 않으면, 대용량 트레픽을 감당해야할 때, 많은 어려움을 겪을 거라 생각하고 직접 적용해보기로 했다.</li>)
+
+[comment]: <> (            <li>필자는 Database와 마이크로서비스 사이에 Message Queuing Server&#40;Apache Kafka&#41;를 이용하여 중간 매개체를 둘 것이다.</li>)
+
+[comment]: <> (            <li>사용 목적 : 프로그래밍 작업은 최소화하면서, Database 개수와 상관없이 마이크로서비스에 직접 Database에 대한 커넥션과 처리작업을 하지 않고, 관련 작업을 Kafka에 일임함으로 써, 보다 비즈니스 도메인에 관련된 처리 작업을 해보자.</li>)
+
+[comment]: <> (            <li>결론 : 성능 향상 관점에서 보자.</li>)
+
+[comment]: <> (        </ul>)
+
+[comment]: <> (    </li>)
 </ol>
 <ol>
     <h3><a href="https://github.com/HyuckJuneHong/damda-eureka-server">Eureka</a></h3>

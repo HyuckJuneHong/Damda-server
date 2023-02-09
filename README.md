@@ -6,9 +6,8 @@
 - 개발환경 : Java 11, Spring Boot 2.6.7, Gradle(Build Tool), Git, MySQL
 - 사용 기술
   - JPA, Swagger, Handler Exception, Spring Security, JWT
-  - Eureka, API Gateway, Feign Client, ErrorDecoder
-  - Spring Cloud, Spring Actuator
-  - RabbitMQ, Kafka, Docker
+  - Eureka, API Gateway, Feign Client, ErrorDecoder, CircuitBreaker
+  - Spring Cloud, Spring Actuator, RabbitMQ, Docker
  
 ## 예상 서비스
 <img width="557" alt="image" src="https://user-images.githubusercontent.com/31675711/216048477-05f0d93e-ee70-4fce-b019-a3e46bc3719b.png">
@@ -33,7 +32,7 @@
             <li>Handler Exception 처리</li>
         </ul>
     </li>
-    <li>Communication Types
+    <li>Communication
         <ul>
             <li>Synchronous(동기) HTTP 통신
                 <ul>
@@ -59,6 +58,13 @@
                 <ul>
                     <li>Feign Logger를 활용한 Feign Client 로그 추적</li>
                     <li>Error Decoder를 활용한 Feign Exception 처리</li>
+                </ul>
+            </li>
+            <li>Microservice 통신 연쇄 오류
+                <ul>
+                    <li>각 서비스끼리 통신을 하다보니, 통신 연쇄 오류를 발견.</li>
+                    <li>때문에, 통신할 서비스에서 에러 발생 시, 에러를 대신할 메소드를 만들어서 해결하는 것이 좋겠다고 판단.</li>
+                    <li>즉, 장애 발생 시, CircuitBreaker를 이용해서 다른 기능으로 대체 수행. = 장애 회피</li>
                 </ul>
             </li>
         </ul> 

@@ -7,7 +7,8 @@
 - 사용 기술
   - JPA, Swagger, Handler Exception, Spring Security, JWT
   - Eureka, API Gateway, Feign Client, ErrorDecoder, CircuitBreaker
-  - Spring Cloud, Spring Actuator, RabbitMQ, Docker
+  - Zipkin, Spring Cloud Sleuth
+  - Spring Cloud Bus, Spring Actuator, RabbitMQ, Docker
  
 ## 예상 서비스
 <img width="557" alt="image" src="https://user-images.githubusercontent.com/31675711/216048477-05f0d93e-ee70-4fce-b019-a3e46bc3719b.png">
@@ -24,7 +25,7 @@
 
 # 프로젝트 기록
 <ol>
-    <h3>각 서비스 공통 작업</h3>
+    <h3>각 서비스 공통 기술</h3>
     <li>각 서비스 Eureka Server 및 API Gateway 등록
         <ul>
             <li>랜덤 포트 부여</li>
@@ -68,6 +69,42 @@
                 </ul>
             </li>
         </ul> 
+    </li>
+    <li>분산 추적
+        <ul>
+            <li> Zipkin
+                <ul>
+                    <li>분산 추적을 하기위해, Twitter에서 사용하는 Zipkin이란 오픈소스 활용</li>
+                    <li>분산 환경의 Timing Data 수집, 추적 시스템으로 시스템 병목 현상 파악</li>
+                    <li>Collector, Query Service, Databasem WebUI로 구성</li>
+                    <li> Span
+                        <ul>
+                            <li>하나의 요청에 사용되는 작업 단위</li>
+                            <li>64 bit unique ID</li>
+                        </ul>
+                    </li>
+                    <li> Trace
+                        <ul>
+                            <li>Tree 구조로 이뤄진 Span Set</li>
+                            <li>하나의 요청에 대한 같은 Trace ID 발급</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <img width="507" alt="image" src="https://user-images.githubusercontent.com/31675711/218035718-6696ce15-b1a7-49da-874a-5eff674fd8a6.png">
+                    </li>
+                </ul>
+            </li>
+            <li>Spring Cloud Sleuth + Zipkin
+                <ul>
+                    <li>Zipkin과 연동해서 현재 갖고 있는 Log 파일 등의 데이터를 전달할 목적</li>
+                    <li>요청 값에 따라 Trace ID, Span ID를 부여한다.</li>
+                    <li>즉, Trace와 Span ID 들을 로그에 추가해서 지속적으로 누적된 데이터를 시각화 해보자.</li>
+                    <li>
+                        <img width="507" alt="image" src="https://user-images.githubusercontent.com/31675711/218038060-2cf36276-e90d-4148-85a0-fba6fd2c5ded.png">
+                    </li>
+                </ul>
+            </li>
+        </ul>
     </li>
 
 [comment]: <> (    <li>Apache Kafka )
@@ -180,6 +217,10 @@
                     <li>Kafka는 대용량 데이터를 빠른 시간내에 처리하고자 할 때 적합.</li>
                     <li>하지만 해당 프로젝트는 대용량 데이터라고 하기엔 부족하기 때문에, </li>
                     <li>적은 데이터를 안전하게 전달하는 것을 보장해주는 RabbitMQ를 선택하게 되었다.</li>
+                    <li>하지만, RabbitMQ는 이벤트 메시지가 성공적으로 잘 전달되면, 메시지 큐에서 삭제되기 때문에, 소비자와 브로커 결합력이 높아진다.</li>
+                    <li>따라서 트래픽이 증가하면 수평적으로 확장하기 어려울 것 같다.</li>
+                    <li>반면에, Kafka는 이벤트 스트림에서 계속 토픽을 유지하기 때문에, RabbitMQ에 비해 유연하고 느슨한 결합을 가진다.</li>
+                    <li>따라서, 추후에 대규모 트래픽이 예상이 되고, 확장이 예상된다면 Kafka를 공부하고 적용해보는 시간도 가져보자.</li>
                 </ul>
             </li>
         </ul>

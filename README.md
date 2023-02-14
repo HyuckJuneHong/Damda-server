@@ -69,6 +69,7 @@
             </li>
         </ul> 
     </li>
+</ol>
 
 [comment]: <> (    <li>Apache Kafka )
 
@@ -87,12 +88,13 @@
 [comment]: <> (        </ul>)
 
 [comment]: <> (    </li>)
-</ol>
+
 <ol>
     <h3><a href="https://github.com/HyuckJuneHong/damda-eureka-server">Eureka</a></h3>
     <li>Eureka Server 구축</li>
- </ol>
- <ol>
+</ol>
+
+<ol>
     <h3><a href="https://github.com/HyuckJuneHong/damda-gateway-server">API Gateway</a></h3>
     <li>
         Gateway Server 구축
@@ -123,8 +125,9 @@
             <li>즉,모든 요청 Authorization Header에 Access Token을 담아 요청을 보내면 서버에서 일련의 인가 과정을 거쳐 Resource Server에 요청을 라우팅하도록 했다.</li>
         </ul>
     </li>
- </ol>
- <ol>
+</ol>
+
+<ol>
     <h3><a href="https://github.com/HyuckJuneHong/damda-user-server">User</a></h3>
     <li>User Server 구축</li>
     <li>
@@ -135,24 +138,37 @@
         </ul>
     </li>
 </ol>
- <ol>
+
+<ol>
     <h3><a href="https://github.com/HyuckJuneHong/damda-product-server">Product</a></h3>
     <li>Product Server 구축</li>
- </ol>
- <ol>
+</ol>
+
+<ol>
     <h3><a href="https://github.com/HyuckJuneHong/damda-order-server">Order</a></h3>
     <li>Order Server 구축</li>
- </ol>
- <ol>
-    <h3><a href="https://github.com/HyuckJuneHong/Damda-server/tree/main/damda-core">Core</a></h3>
-    <li>코드 공통화
-        <ul>
-            <li>Enum 속성 공통화</li>
-            <li>Exception 처리 공통화</li>
-            <li>Error Model 공통화</li>
-        </ul>
-    </li>
 </ol>
+
+[comment]: <> (<ol>)
+
+[comment]: <> (    <h3><a href="https://github.com/HyuckJuneHong/Damda-server/tree/main/damda-core">Core</a></h3>)
+
+[comment]: <> (    <li>코드 공통화)
+
+[comment]: <> (        <ul>)
+
+[comment]: <> (            <li>Enum 속성 공통화</li>)
+
+[comment]: <> (            <li>Exception 처리 공통화</li>)
+
+[comment]: <> (            <li>Error Model 공통화</li>)
+
+[comment]: <> (        </ul>)
+
+[comment]: <> (    </li>)
+
+[comment]: <> (</ol>)
+
 <ol>
     <h3><a href="https://github.com/HyuckJuneHong/damda-config-server">Spring Cloud Config Server</a></h3>
     <li>분산 시스템에서 서버 클라이언트 구성에 필요한 설정 정보를 외부 시스템에서 관리를 위함.</li>

@@ -26,11 +26,12 @@
 # 프로젝트 기록
 <ol>
     <h3>각 서비스 공통 기술</h3>
-    <li>각 서비스 Eureka Server 및 API Gateway 등록
+    <li>각 서비스 Eureka Server 및 API Gateway 등록 및 도커 이미지화
         <ul>
             <li>랜덤 포트 부여</li>
             <li>Swagger를 활용한 API 문서 자동화</li>
             <li>Handler Exception 처리</li>
+            <li>모든 서비스 컨테이너화</li>
         </ul>
     </li>
     <li>Communication
